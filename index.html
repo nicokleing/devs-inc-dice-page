@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the website -->
+    <title>devsInc - Creating Fun Tabletop Games</title>
+    <!-- Styles and fonts are linked below -->
+    <!-- Boxicons for icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Remixicon for additional icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Link to the site's main stylesheet -->
+    <link rel="stylesheet" href="style2 - Original.css">
+    <!-- JavaScript functionality -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header section containing the logo and navigation bar -->
+    <header>
+        <!-- Company logo, clickable linking to home -->
+        <a href="#" class="logo">devsInc</a>
+        <!-- Navigation toggle for mobile view, hidden checkbox hack -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class='bx bx-menu' id="menu-icon"></div>
+        </label>      
+        <!-- Navigation menu -->
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Our Games</a>
+                <!-- Submenu for games category -->
+                <ul class="submenu">
+                    <li><a href="#">Tabletop Games</a></li>
+                    <li><a href="#">Dice-Based Games</a></li>
+                    <li><a href="#">Family Games</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+                <!-- Submenu for company information -->
+                <ul class="submenu">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Meet the Team</a></li>
+                    <li><a href="#">Contact</a></li>                    
+                </ul>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+                <!-- Submenu for blog categories -->
+                <ul class="submenu">
+                    <li><a href="#">Latest Posts</a></li>
+                    <li><a href="#">Trending Topics</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Shop</a></li>
+        </ul>
+    </header>
+    <!-- Hero section with a call to action -->
+    <section class="hero">
+        <!-- Text content in the hero section -->
+        <div class="hero-text">
+            <h5>Explore the World of Gaming</h5>
+            <h4>Discover Endless Fun with devsInc Tabletop Games</h4>
+            <h1>devsInc</h1>
+            <p>At devsInc, we specialize in creating innovative tabletop games that bring families together. From classic board games to exciting dice-based adventures, we have something for everyone.</p>
+            <ul>
+                <li>🎲 Engaging Gameplay for All Ages</li>
+                <li>🌟 Creative Designs and Themes</li>
+                <li>🏆 Award-Winning Titles</li>
+            </ul>
+            <p>Join us in our mission to create memorable gaming experiences that inspire joy and connection.</p>
+            <a href="#dice-generator">Dice Generator</a>
+            <a href="#" class="videos"><i class="ri-terminal-box-line"></i> Start</a>
+        </div>
+        <!-- Image for hero section -->
+        <div class="hero-img">
+            <img src="/assets/imgs/dice-faces.webp" alt="Picture">
+        </div>    
+        <!-- Social media icons for the company -->
+        <div class="icons">
+            <a href=""><i class="ri-github-fill"></i></a>
+            <a href=""><i class="ri-linkedin-fill"></i></a>
+            <a href=""><i class="ri-twitter-x-line"></i></a>
+            <a href=""><i class="ri-instagram-line"></i></a>
+            <a href=""><i class="ri-youtube-line"></i></a>
+            <a href=""><i class="ri-facebook-circle-fill"></i></a>
+        </div>
+        <!-- Scroll down icon in the hero section -->
+        <div class="scroll-down">
+            <a href="#"><i class='bx bxs-chevron-down'></i></a>
+        </div>
+    </section>
+    <!-- Section for dice generator functionality -->
+    <section class="dice-selection" id="dice-generator">
+        <h1>Dice Generator for Tabletop Games</h1>
+        <label for="diceType">Select Dice Type:</label>
+        <select id="diceType">
+            <option value="d4">D4</option>
+            <option value="d6" selected>D6</option>
+            <option value="d8">D8</option>
+            <option value="d10">D10</option>
+            <option value="d12">D12</option>
+            <option value="d20">D20</option>
+        </select>            
+        <button id="rollButton">Roll</button>
+        <div id="resultDisplay">Roll result appears here...</div>
+        <div id="diceContainer" class="dice-container"></div>
+    </section>
+</body>
+</html>
