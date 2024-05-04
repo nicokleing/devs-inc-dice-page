@@ -623,9 +623,6 @@ header {
         position: relative;
         /* Cambia la posición a relativa para anclar el menú desplegable*/
 
-        box-shadow: none;
-
-        height: auto;
     }
 
     .logo {
@@ -635,12 +632,9 @@ header {
     }
 
 
-    #menu-icon {
-        display: block;
-    }
 
     .navlist {
-        display: flex;
+        display: none;
         justify-content: center;
         /* Centra horizontalmente */
         align-items: center;
@@ -664,16 +658,12 @@ header {
         align-items: center;
         justify-content: start;
         background-color: #001717;
-        /* Asegura que el fondo sea oscuro */
         width: 100%;
-        /* Ajusta el ancho para que ocupe el disponible en el header */
         position: absolute;
         top: 60px;
-        /* Ajusta esto según la altura de tu header */
         left: 0;
         padding: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        /* Opcional: sombra para mejorar la visibilidad */
     }
 
     .navlist a {
