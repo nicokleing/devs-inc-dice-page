@@ -1,0 +1,725 @@
+/* NORMALIZACIÓN:  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Esto mantiene el ancho y alto a pesar de padding y border*/
+    font-family: 'Inconsolata', monospace;
+    list-style: none;
+    /* Quitar los puntos e decoración de las listas */
+    text-decoration: none;
+    /* Esto quita el subrayado de los enlaces */
+    color: white;
+}
+
+body {
+    background-color: black;
+    /* TODO: borrar cuando tengamos el fondo final */
+}
+
+header {
+    position: fixed;
+    /* Esto hace que el haader se quede fijo en la parte superior */
+    right: 0;
+    top: 0;
+    z-index: 100;
+    /* Esto hace que el header se muestre por encima*/
+    width: 100%;
+    display: flex;
+    /* Esto hará que los elementos se pongan en linea */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: space-between;
+    /* Que los elementos se separen */
+    padding: 15px 3%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+    /* este es el grueso de las letras */
+}
+
+.navlist {
+    display: flex;
+    /* Esto sirve para que los elementos de la lista UL se pongan en linea*/
+}
+
+.navlist a {
+    margin-left: 60px;
+    /* es para separar las palabras */
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    /* este es un subrayado transparente */
+    transition: transform 0.5s ease, border-bottom 0.5s ease;
+    /* esto es para animar todas las caracteristicas del .navlist a */
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+    /* este es un subrayado blanco que aparecerá cuando hacemos estamos encima con el mouse */
+    transform: translateY(10px);
+    /* Baja el enlace 10px */
+    transition: transform 1s ease 1s, border-bottom 0.5s ease;
+}
+
+.navlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navlist>li {
+    position: relative;
+    display: inline-block;
+}
+
+.navlist>li a {
+    display: block;
+    padding: 10px;
+    color: white;
+
+    text-decoration: none;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    margin-top: 1px;
+    padding: 0;
+    /* Agrega estos ajustes para centrar el submenú */
+    left: 0;
+    /* Posición absoluta respecto al lado izquierdo del menú padre */
+    top: 100%;
+    /* Posición debajo del menú padre */
+    width: 100%;
+    /* Ancho completo */
+
+
+}
+
+.submenu li a {
+    padding: 10px;
+    width: 200px;
+    display: block;
+    text-align: left;
+}
+
+.navlist>li:hover .submenu {
+    display: block;
+
+}
+
+
+
+
+#menu-icon {
+    display: none;
+    /* lo pongo en none para que solo se vea cuando la pagina este colapsada en forma horizontal */
+    color: white;
+    font-size: 35px;
+    z-index: 101;
+    /* Para que esté sobre el header*/
+    cursor: pointer;
+    /* para que aparezca la manito cuando coloco el mouse encima*/
+}
+
+
+
+#menu-toggle {
+    display: none;
+    /*Nunca quiero que se vea el checkbox*/
+}
+
+#menu-icon-action {
+    display: none;
+    /* para que no se le pueda hacer click*/
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    /* fondo de color gradiente*/
+    position: relative;
+    /* para que el contenedor sea relativo (Perimite usar top, botton, left y right)*/
+    display: grid;
+    /*para que e hero se pueda dividir en dos columnas*/
+    grid-template-columns: 1fr 1fr;
+    /*las dos columnas*/
+    align-items: center;
+    /* para alinear verticalmente el hero*/
+    gap: 2rem;
+    /* haya espacio de 2 rem entre las dos columnas */
+
+}
+
+.hero-text {
+    text-align: justify;
+    /* Ajusta el texto justificadamente */
+    padding: 150px;
+    /* Añade algo de padding para evitar que el texto toque directamente los bordes */
+    max-width: 900px;
+    /* Controla el ancho máximo para mejorar la legibilidad */
+    margin: auto;
+    /* Centra el contenedor dentro de su elemento padre */
+    font-family: 'Roboto Mono', monospace;
+    /* Asegura que la fuente sea coherente */
+}
+
+
+.section {
+    padding: 0 8%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-text h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin: 0 0 30px;
+}
+
+.hero-text p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 80%;
+    margin-bottom: 40px;
+    line-height: 1.9;
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Cambia la altura de flotación */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hero-img img {
+    width: 500px;
+    margin: 10% 0 0 10%;
+    height: auto;
+    border-radius: 50%;
+    /* Redondea la imagen */
+    box-shadow: 0 0 1px black;
+    /* Añade una sombra difuminada */
+}
+
+.hero-img:hover img {
+    opacity: 0.6;
+    animation: floating 3s ease-in-out infinite;
+    /* Agregamos la animación solo al hacer hover */
+}
+
+.hero-text a {
+    display: inline-block;
+    background-color: #4d4d44;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    margin: 10px 5px;
+    /* Añade un poco de margen alrededor de cada botón */
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.videos {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.hero-text a.videos i {
+    vertical-align: middle;
+}
+
+.icons {
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+    transform: translateY(-50%);
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    transition: all 0.5s ease;
+}
+
+.icons i:hover {
+    color: #4d4d4d;
+    transform: translateY(-5px);
+
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 6%;
+    right: 3%;
+
+
+}
+
+.scroll-down i {
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    background-color: #21383d;
+    border-radius: 30px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px)
+}
+
+/* Estilos generales */
+
+/* Ajustes para el nuevo contenido */
+.dice-selection {
+    margin-top: 20px;
+    /* Ajusta el margen superior según sea necesario */
+    padding: 20px;
+    /* Agrega un relleno para espacio alrededor de la sección */
+    background-color: black;
+    /* Cambia el color de fondo según tu preferencia */
+    border: 1px solid black;
+    /* Añade un borde para separar visualmente la sección */
+    border-radius: 5px;
+    /* Agrega bordes redondeados para mejorar el aspecto */
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+    /* fondo de color gradiente*/
+    display: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.dice-selection h1 {
+    margin-bottom: 10px;
+    font-size: large 40px;
+    /* Espacio entre el título y el resto del contenido */
+
+}
+
+/* Ajustes para los elementos de formulario dentro de la sección de generación de dados */
+.dice-selection label {
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+.dice-selection select {
+    /* Cambia el color de fondo y el color del texto */
+    background-color: #fff;
+    color: #000;
+    /* Agrega bordes redondeados para suavizar los bordes */
+    border-radius: 5px;
+    /* Ajusta el tamaño y el espaciado del texto dentro del cuadro de selección */
+    padding: 8px;
+    font-size: 16px;
+    /* Agrega sombra para resaltar el cuadro de selección */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.dice-selection button {
+    display: inline-block;
+    background-color: #4d4d44;
+    border: 1px solid white;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    margin: 10px 5px;
+    /* Añade un poco de margen alrededor de cada botón */
+}
+
+.dice-selection button:hover {
+    /* Cambia los colores de fondo y de texto */
+    background-color: #4d4d44;
+    color: white;
+    /* Agrega bordes redondeados y sombra */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    transform: translateX(8px);
+    
+}
+
+.dice-selection #resultDisplay {
+    display: center;
+    background-color: #4d4d44;
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    margin: 10px 5px;
+    /* Añade un poco de margen alrededor de cada botón */
+}
+
+.dice-selection #resultDisplay:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+#diceType {
+    /* Cambia el color de fondo */
+    background-color: grey;
+    /* Cambia el color de fondo a blanco */
+    /* Cambia el color del borde */
+    border-color: #000000;
+    /* Cambia el color del borde a negro */
+    /* Cambia el color del texto */
+    color: #000000;
+    /* Cambia el color del texto a negro */
+    /* Cambia la apariencia del cursor */
+    cursor: pointer;
+    /* Cambia el cursor al puntero cuando se pasa por encima */
+    /* Cambia la apariencia del cuadro de selección */
+    padding: 10px;
+    /* Agrega un poco de espacio interno al cuadro de selección */
+    border-radius: 5px;
+    /* Agrega bordes redondeados */
+    /* Agrega sombra para resaltar el cuadro de selección */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#diceType option {
+    /* Cambia el color de fondo */
+    background-color: gray;
+    /* Cambia el color de fondo a blanco */
+    /* Cambia el color del texto */
+    color: #000000;
+    /* Cambia el color del texto a negro */
+}
+
+#diceType option:checked {
+    background-color: #cccccc;
+    /* Cambia el color de fondo cuando se selecciona a gris */
+}
+
+.resultDisplay {
+    /* Mantén el fondo transparente y el borde sin color */
+    background-color: transparent;
+    border: none;
+    /* Agrega sombra para resaltar el cuadro de selección */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Agrega un borde redondeado para suavizar los bordes */
+    border-radius: 10px;
+    /* Alinea el contenido al centro */
+    text-align: center;
+}
+
+/* Estilos para los dados */
+.dice-container {
+    text-align: center;
+    /* Centra los dados dentro de su contenedor */
+    margin-top: 20px;
+    /* Espacio superior entre los dados y el resto del contenido */
+    color: black;
+}
+
+.dice-container .die {
+    width: 500px;
+    /* Tamaño de los dados */
+    height: 600px;
+    display: inline-block;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+    color: black;
+}
+
+/* Clases de ejemplo para diferentes caras del dado */
+.dice-container .die.d1 {
+    background-image: url('../assets/imgs/d1.png');
+}
+
+.dice-container .die.d2 {
+    background-image: url('../assets/imgs/d2.png');
+}
+
+.dice-container .die.d3 {
+    background-image: url('../assets/imgs/d3.png');
+}
+
+.dice-container .die.d4 {
+    background-image: url('../assets/imgs/d4.png');
+}
+
+.dice-container .die.d5 {
+    background-image: url('../assets/imgs/d5.png');
+}
+
+.dice-container .die.d6 {
+    background-image: url('../assets/imgs/d6.png');
+}
+
+.dice-container .die.d7 {
+    background-image: url('../assets/imgs/d7.png');
+}
+
+.dice-container .die.d8 {
+    background-image: url('../assets/imgs/d8.png');
+}
+
+.dice-container .die.d9 {
+    background-image: url('../assets/imgs/d9.png');
+}
+
+.dice-container .die.d10 {
+    background-image: url('../assets/imgs/d10.png');
+}
+
+.dice-container .die.d11 {
+    background-image: url('../assets/imgs/d11.png');
+}
+
+.dice-container .die.d12 {
+    background-image: url('../assets/imgs/d12.png');
+}
+
+.dice-container .die.d13 {
+    background-image: url('../assets/imgs/d13.png');
+}
+
+.dice-container .die.d14 {
+    background-image: url('../assets/imgs/d14.png');
+}
+
+.dice-container .die.d15 {
+    background-image: url('../assets/imgs/d15.png');
+}
+
+.dice-container .die.d16 {
+    background-image: url('../assets/imgs/d16.png');
+}
+
+.dice-container .die.d17 {
+    background-image: url('../assets/imgs/d17.png');
+}
+
+.dice-container .die.d18 {
+    background-image: url('../assets/imgs/d18.png');
+}
+
+.dice-container .die.d19 {
+    background-image: url('../assets/imgs/d19.png');
+}
+
+.dice-container .die.d20 {
+    background-image: url('../assets/imgs/d20.png');
+}
+
+
+/* Otras clases y estilos */
+/* Adjustments for the rest of your CSS styles */
+
+
+
+
+
+
+/*Aca vamos a hacer mediaqueries para que la web sea responsive*/
+
+@media (max-width:992px) {
+    section {
+        padding: 0 3%;
+        transition: 0.2s;
+    }
+
+
+
+
+    .hero-text {
+        padding-top: 0;
+        text-align: center;
+
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 80%;
+        margin: 10% 0 0 10%;
+    }
+
+    .hero-text p {
+        font-size: 70%;
+    }
+
+    .hero-text a {
+        padding: 10px 20px;
+        /* Reduce el padding para hacer los botones más pequeños */
+        font-size: 80%;
+        /* Reduce el tamaño de la fuente */
+        margin: 5px;
+        /* Reduce el margen para evitar la superposición */
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    header {
+        position: relative;
+        /* Cambia la posición a relativa para anclar el menú desplegable*/
+
+        box-shadow: none;
+
+        height: auto;
+    }
+
+    .logo {
+        display: relative;
+        background-color: transparent;
+
+    }
+
+
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        display: flex;
+        justify-content: center;
+        /* Centra horizontalmente */
+        align-items: center;
+        /* Centra verticalmente */
+    }
+
+    #menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 150;
+        /* Asegúrate de que esté sobre el contenido */
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked+.menu-icon-action+.navlist,
+    .navlist:hover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        background-color: #001717;
+        /* Asegura que el fondo sea oscuro */
+        width: 100%;
+        /* Ajusta el ancho para que ocupe el disponible en el header */
+        position: absolute;
+        top: 60px;
+        /* Ajusta esto según la altura de tu header */
+        left: 0;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        /* Opcional: sombra para mejorar la visibilidad */
+    }
+
+    .navlist a {
+        padding: 12px 20px;
+        text-align: center;
+        color: white;
+        display: block;
+        /* Asegura que cada elemento se muestre en su propia línea */
+    }
+
+    .navlist>li {
+        width: 100%;
+        /* Ocupa todo el ancho del menú */
+        text-align: center;
+    }
+
+    .submenu {
+        position: absolute;
+        list-style-type: none;
+        margin-top: -1px;
+        /* Ajusta el margen superior para superponer el submenú al menú principal */
+        padding: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navlist>li:hover .submenu,
+    .navlist>li:focus-within .submenu {
+        display: flex;
+        /* Muestra el submenú al pasar el ratón o enfocar */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        position: relative;
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .hero hero-text {
+
+        text-align: center;
+        padding-top: 100px;
+    }
+
+
+}
