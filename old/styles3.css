@@ -1,0 +1,184 @@
+/* Estilos Base y Normalización */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: #131313;
+}
+
+/* Header y Navegación */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu > li {
+    position: relative;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid white;
+    color: #4CAF50;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #202020;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.menu > li:hover .submenu {
+    display: block;
+}
+
+/* Sección Hero */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px;
+    background: linear-gradient(245.59deg, #31494e 0%, #385e70 25%, #131313 75%);
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor de los dados */
+.dice-game {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #252525;
+    text-align: center;
+    border-radius: 8px;
+}
+
+select, button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #367C39;
+}
+
+#resultDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .submenu {
+        width: 100%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-content, .hero-image img {
+        margin: auto;
+    }
+
+    /* Estilos para las diferentes caras de los dados */
+.die {
+    width: 100px;  /* Ajustado para un tamaño más práctico */
+    height: 100px; /* Ajustado para un tamaño más práctico */
+    display: inline-block;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%; /* Bordes ligeramente redondeados */
+}
+
+.die.d1 { background-image: url('d1.png'); }
+.die.d2 { background-image: url('d2.png'); }
+.die.d3 { background-image: url('d3.png'); }
+.die.d4 { background-image: url('d4.png'); }
+.die.d5 { background-image: url('d5.png'); }
+.die.d6 { background-image: url('d6.png'); }
+.die.d7 { background-image: url('d7.png'); }
+.die.d8 { background-image: url('d8.png'); }
+.die.d9 { background-image: url('d9.png'); }
+.die.d10 { background-image: url('d10.png'); }
+.die.d11 { background-image: url('d11.png'); }
+.die.d12 { background-image: url('d12.png'); }
+.die.d13 { background-image: url('d13.png'); }
+.die.d14 { background-image: url('d14.png'); }
+.die.d15 { background-image: url('d15.png'); }
+.die.d16 { background-image: url('d16.png'); }
+.die.d17 { background-image: url('d17.png'); }
+.die.d18 { background-image: url('d18.png'); }
+.die.d19 { background-image: url('d19.png'); }
+.die.d20 { background-image: url('d20.png'); }
+
+}

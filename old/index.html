@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web Tittle-->
+    <title>SBM - Software, Business Intelligence & Machine Learning Factory</title>
+
+
+
+    <!-- https://boxicons.com/ -->
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- https://remixicon.com/ -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- https://fonts.google.com/ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <!-- Import Css file-->
+    
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+
+    <!-- esta seccion sera la cabecera de la pagina web la cual tendra logo y barra de navegacion  -->
+
+    <header>
+        <!-- Logo  -->
+
+        <a href="#" class="logo">SBM Factory</a>
+
+        <!-- Truco para que el boton sea clickeable sin usar javascript  -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class='bx bx-menu' id="menu-icon"></div>
+        </label>
+
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Software & BI Solutions</a>
+                <ul class="submenu">
+                    <li><a href="#">Software Engineering & Design</a></li>
+                    <li><a href="#">BI (Business Intelligence)</a></li>
+                    <li><a href="#">Data Science</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Cloud & Big Data Solutions</a>
+                <ul class="submenu">
+                    <li><a href="#">Big Data</a></li>
+                    <li><a href="#">Cloud Solutions</a></li>
+                    <li><a href="#">Data Engineering & AI</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Innovation</a>
+                <ul class="submenu">
+                    <li><a href="#">ML & AI</a></li>
+                    <li><a href="#">Entrepreneurship</a></li>
+                    <li><a href="#">Start Up World</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+                <ul class="submenu">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Management</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    </header>
+    <!-- Hero Section - Call to action  -->
+
+    <section class="hero">
+        <div class="hero-text">
+            <h5>Innovate with Confidence</h5>
+            <h4>Empower Your Business with Advanced AI & Machine Learning</h4>
+            <h1>SBM</h1>
+            <p>At SBM Factory, we don't just create solutions; we transform your business challenges into competitive
+                advantages. Join leading enterprises in leveraging the power of AI.</p>
+            <ul>
+                <li>🚀 Boost Operational Efficiency</li>
+                <li>📊 Make Data-Driven Decisions</li>
+                <li>🛠️ Custom Solutions Tailored for Your Needs</li>
+            </ul>
+            <p>Ready to innovate? Transform your ideas into impactful technologies that deliver real results.</p>
+            <a href="#">Explore Our Services</a>
+            <a href="#" class="videos"><i class="ri-terminal-box-line"></i> Start</a>
+
+        </div>
+
+        <div class="hero-img">
+            <img src="/assets/imgs/vireo4.webp" alt="Picture">
+
+        </div>
+
+
+
+
+    </section>
+
+    <div class="container">
+
+        <main>
+            <div class="dice-selection">
+                <label for="diceType">Dice Generator for Tabletop Games <br> Select Dice Type:</label>
+                <select id="diceType">
+                    <option value="d4">D4</option>
+                    <option value="d6" selected>D6</option>
+                    <option value="d8">D8</option>
+                    <option value="d10">D10</option>
+                    <option value="d12">D12</option>
+                    <option value="d20">D20</option>
+                </select>
+            </div>
+            <button id="rollButton">Roll</button>
+            <div id="resultDisplay">Roll result appears here...</div>
+            <div id="diceContainer" class="dice-container"></div>
+        </main>
+        <footer>
+            <p>Thank you for using our Dice Generator!</p>
+        </footer>
+    </div>
+
+    <div class="icons">
+        <a href=""><i class="ri-github-fill"></i></a>
+        <a href=""><i class="ri-linkedin-fill"></i></a>
+        <a href=""><i class="ri-twitter-x-line"></i></a>
+        <a href=""><i class="ri-instagram-line"></i></a>
+        <a href=""><i class="ri-youtube-line"></i></a>
+        <a href=""><i class="ri-facebook-circle-fill"></i></a>
+    </div>
+
+    <div class="scroll-down">
+        <a href="#"><i class='bx bxs-chevron-down'></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

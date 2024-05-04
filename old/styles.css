@@ -1,0 +1,86 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(83, 49, 49, 0.274); /* Agrega esta línea para hacer el fondo negro */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+main {
+    margin-top: 20px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f73;
+}
+
+#resultDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+}
+
+/* Example classes for different dice faces, adjust based on your sprite */
+.die {
+    width: 500px;  /* Change this to increase the size */
+    height: 500px; /* Change this to increase the size */
+    display: inline-block;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10%;
+}
+
+.die.d1 { background-image: url('d1.png'); }
+.die.d2 { background-image: url('d2.png'); }
+.die.d3 { background-image: url('d3.png'); }
+.die.d4 { background-image: url('d4.png'); }
+.die.d5 { background-image: url('d5.png'); }
+.die.d6 { background-image: url('d6.png'); }
+.die.d7 { background-image: url('d7.png'); }
+.die.d8 { background-image: url('d8.png'); }
+.die.d9 { background-image: url('d9.png'); }
+.die.d10 { background-image: url('d10.png'); }
+.die.d11 { background-image: url('d11.png'); }
+.die.d12 { background-image: url('d12.png'); }
+.die.d13 { background-image: url('d13.png'); }
+.die.d14 { background-image: url('d14.png'); }
+.die.d15 { background-image: url('d15.png'); }
+.die.d16 { background-image: url('d16.png'); }
+.die.d17 { background-image: url('d17.png'); }
+.die.d18 { background-image: url('d18.png'); }
+.die.d19 { background-image: url('d19.png'); }
+.die.d20 { background-image: url('d20.png'); } 
+
+

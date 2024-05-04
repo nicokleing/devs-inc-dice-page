@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Generator for Tabletop Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dice Generator for Tabletop Games</h1>
+        </header>
+        <main>
+            <div class="dice-selection">
+                <label for="diceType">Select Dice Type:</label>
+                <select id="diceType">
+                    <option value="d4">D4</option>
+                    <option value="d6" selected>D6</option>
+                    <option value="d8">D8</option>
+                    <option value="d10">D10</option>
+                    <option value="d12">D12</option>
+                    <option value="d20">D20</option>
+                </select>
+            </div>
+            <button id="rollButton">Roll</button>
+            <div id="resultDisplay">Roll result appears here...</div>
+            <div id="diceContainer" class="dice-container"></div>
+        </main>
+        <footer>
+            <p>Thank you for using our Dice Generator!</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

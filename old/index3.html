@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBM - Software, Business Intelligence & Machine Learning Factory</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">SBM Factory</a>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class='bx bx-menu'></i></label>
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tech Solutions</a>
+                    <ul class="submenu">
+                        <li><a href="#">Software Development</a></li>
+                        <li><a href="#">Business Intelligence</a></li>
+                        <li><a href="#">Data Science</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Data & Cloud</a>
+                    <ul class="submenu">
+                        <li><a href="#">Big Data</a></li>
+                        <li><a href="#">Cloud Services</a></li>
+                        <li><a href="#">AI Engineering</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Innovation</a>
+                    <ul class="submenu">
+                        <li><a href="#">Machine Learning</a></li>
+                        <li><a href="#">Startups</a></li>
+                        <li><a href="#">Entrepreneurship</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empower Your Business</h1>
+            <p>Join leading enterprises in leveraging the power of AI to transform business challenges into competitive advantages.</p>
+            <a href="#">Explore Our Services</a>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/imgs/vireo4.webp" alt="Innovative Image">
+        </div>
+    </section>
+
+    <section class="dice-game">
+        <header>
+            <h2>Dice Generator for Tabletop Games</h2>
+            <p>Select Dice Type:</p>
+        </header>
+        <main>
+            <select id="diceType">
+                <option value="d4">D4</option>
+                <option value="d6" selected>D6</option>
+                <option value="d8">D8</option>
+                <option value="d10">D10</option>
+                <option value="d12">D12</option>
+                <option value="d20">D20</option>
+            </select>
+            <button id="rollButton">Roll</button>
+            <div id="resultDisplay">Roll result appears here...</div>
+        </main>
+        <div id="diceContainer" class="dice-container"></div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href=""><i class="ri-github-fill"></i></a>
+            <a href=""><i class="ri-linkedin-fill"></i></a>
+            <a href=""><i class="ri-twitter-x-line"></i></a>
+            <a href=""><i class="ri-instagram-line"></i></a>
+            <a href=""><i class="ri-youtube-line"></i></a>
+            <a href=""><i class="ri-facebook-circle-fill"></i></a>
+        </div>
+        <p>Thank you for visiting SBM Factory!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
